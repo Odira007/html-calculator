@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>SIMPLE CALCULATOR</h2>
+        <table class="table">
+            <tr>
+                <td colspan="3"><input type="text" class="res"/></td>
+                <td><input type="button" value="C" onclick="clr()" class="clear"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="get(1)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="2" onclick="get(2)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="3" onclick="get(3)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="/" onclick="modulo()" onkeydown="key(event)"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="get(4)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="5" onclick="get(5)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="6" onclick="get(6)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="*" onclick="get('*')" onkeydown="key(event)"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="get(7)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="8" onclick="get(8)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="9" onclick="get(9)" onkeydown="key(event)"/></td>
+                <td><input type="button" value="-" onclick="get('-')" onkeydown="key(event)"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="get(0)"/></td>
+                <td><input type="button" value="." onclick="get('.')"/></td>
+                <td><input type="button" value="=" onclick="solve()"/></td>
+                <td><input type="button" value="+" onclick="get('+')"/></td>
+            </tr>
+            
+        </table>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
