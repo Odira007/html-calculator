@@ -13,6 +13,9 @@ function key(event) {
         event.key == "-" || event.key == "+" 
     )
     result.value += event.key;
+    if (event.key == "=") {
+        solve();
+    }
 }
 
 table.addEventListener('onkeyup', (event) => {
@@ -49,15 +52,4 @@ function solve() {
 // clear the result box
 const clr = () => {
     result.value = "";
-}
-const modulo = () => {
-    
-    for (let i = 0; i < result.value.length; i++) {
-        if (result.value[i] === '%') {
-            let num1 = result.value.slice(0, indexof('%'));
-            let num2 = result.value.slice(indexof('%') + 1);
-            
-            eval(num1, num2);
-        }
-    }
 }
